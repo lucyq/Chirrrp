@@ -1,0 +1,7 @@
+<!--LOOPING THROUGH ALL TWEETS -->
+<ul>
+	<% @tweets.each do |tweet| %>
+		<li><%=tweet.user.email %>: <%= tweet.tweet %></li>
+		<br>
+	<%end%>
+</ul>

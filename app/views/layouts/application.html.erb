@@ -25,10 +25,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li>
-          <%= link_to "New Tweet", new_tweet_path %>
-        </li>
-
         <% if !user_signed_in? %>
           <li>
             <%= link_to "Sign Up", new_user_registration_path %>
@@ -36,6 +32,14 @@
 
           <li>
             <%= link_to "Sign In", new_user_session_path %>
+          </li>
+
+        <% else %>
+          <li>
+            <%= link_to "New Tweet", new_tweet_path %>
+          </li>
+          <li>
+              <%= link_to "News Feed", tweets_path %>
           </li>
     <%end%>
     
