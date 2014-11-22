@@ -1,0 +1,61 @@
+
+rails server 
+rails generate controller static_pages
+
+bundle install --without production
+
+main_page.html.rb --> put it in static_pages folder within views
+
+
+IN main_page.html.rb
+	write whatever content?
+	<%= @variable %> #syntax for variables?
+
+
+
+rails generate controller tweets
+rails generate model tweet
+
+IN migrate somethingsomething
+
+create_table :tweets do |t| #makes a new table
+	t.string :tweet #t. makes a block? 
+	t.timestamps #t represents the tweets table
+end
+
+
+rake db:migrate
+
+db schema --> schema.rb
+
+SHOULD HAVE table w/ t.date time t.string "tweet"
+
+
+assets->controllers
+in tweets_controller.rb
+
+class TweetsController <ApplicationController
+	def new
+		@tweet = Tweet.new
+	end
+end
+
+bundle install (again) to get simple form
+rails generate simple:form
+
+
+in maing page
+<% simple_form_for @tweet do |f| %?
+	<%= f.input :tweet %>
+	<%= f.button :submit %>
+	<%end%>
+
+
+rake routes --> view HTTP requests
+
+ruby devise
+
+
+
+
+
