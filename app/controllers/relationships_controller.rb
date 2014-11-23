@@ -1,5 +1,6 @@
 class RelationshipsController < ApplicationController
 	def create
+		# user you are trying to follow
 		@user = User.find(relationship_params[:followed_id])
 
 		if current_user.follow(@user)
