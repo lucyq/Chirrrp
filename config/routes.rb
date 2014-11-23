@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # plural b/c it refers to controller
   resources :tweets
   resources :profiles
+  resources :relationships, only: [:create]
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

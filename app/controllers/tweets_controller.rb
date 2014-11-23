@@ -22,8 +22,10 @@ class TweetsController < ApplicationController
 	# making a list of all tweets except your own
 	def index
 		@tweets = Tweet.all.reject {|tweet| tweet.user == current_user}
-	end
+		@relationships = Relationship.new  
 
+	end
+	
 	def tweet_params
 		params.require(:tweet).permit(:tweet)
 	end

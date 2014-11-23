@@ -1,7 +1,18 @@
 <!--LOOPING THROUGH ALL TWEETS -->
+Newsfeed: <br><br>
 <ul>
 	<% @tweets.each do |tweet| %>
 		<li><%=tweet.user.email %>: <%= tweet.tweet %></li>
-		<br>
+		<% if current_user.following?(tweet.user) %>
+			<button type ="button" class ="btn btn-danger"> Already following </button>
+		<% else %>
+			<%= simple_form_for @relationships do |f| %>
+			<%= f.input :followed_id, as: :hidden, input_html: {value: tweet.user.id} %>
+			<%= f.button :submit, class: 'btn btn-primary' %>
+		<%end%>
+		<%end%>
+	</li>
+	<br>
+
 	<%end%>
 </ul>
