@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'static_pages#main_page'
 
+  # plural b/c it refers to controller
   resources :tweets
+  resources :profiles
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

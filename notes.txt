@@ -57,5 +57,7 @@ ruby devise
 
 
 
+heroku rake db:migrate --> run database
+
 
 

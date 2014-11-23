@@ -42,6 +42,8 @@ gem 'spring',        group: :development
 #NEW CODE THAT YOU ADDED
 gem 'simple_form'
 
+gem 'carrierwave'
+
 gem 'devise'
 
 group :development, :test do 
