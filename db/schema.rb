@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141123181128) do
+ActiveRecord::Schema.define(version: 20141123192705) do
+
+  create_table "hashtags", force: true do |t|
+    t.string   "h"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "profiles", force: true do |t|
     t.integer  "user_id"

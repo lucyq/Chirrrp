@@ -18,6 +18,7 @@ class ProfilesController < ApplicationController
 
 	end
 
+	redirect_to profile_path(current_user.profile)
 
 	###
 
