@@ -11,8 +11,7 @@ Uses the following: devise, simple_form, carrierwave, twitter-text, sqlite3
 
 
 
-* - - -   I N   P R O G R E S S   - - - *
+IN PROGRESS:
 	Still missing the following:
 		hashtags, profiles
-* - - - - - - - - - - - - - - - - - - - *
 
